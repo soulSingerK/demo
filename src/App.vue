@@ -6,6 +6,7 @@
 			<friends-normal v-if="leftMenuType == 'new-message' || leftMenuType == 'tody-reception'"></friends-normal>
 			<friends-all v-if="leftMenuType == 'my-friends'"></friends-all>
 			<friends-tag v-if="leftMenuType == 'my-tag'"></friends-tag>
+			<friends-new v-if="leftMenuType === 'new-friends'"></friends-new>
 		</div>
 		 <div class="chart">
             <chart @show="maskIsShow=true" @hidden="maskIsShow=false"></chart>
@@ -25,6 +26,7 @@
 	import FriendsNormal from '@/components/friendbox/friends-normal' // 最新聊天表 今日接待表
 	import FriendsAll from '@/components/friendbox/friends-all' // 我的好友表
 	import FriendsTag from '@/components/friendbox/friends-tag' // 我的标签表
+	import FriendsNew from '@/components/friendbox/friends-new' // 新的朋友
 	import AddTags from '@/common/component/AddTags/AddTags' //添加标签的弹窗
 	import diaLog from '@/common/component/dialog/dialog'
 
@@ -39,6 +41,7 @@
 			FriendsNormal,
 			FriendsAll,
 			FriendsTag,
+			FriendsNew,
 			diaLog
 		},
 		data() {
